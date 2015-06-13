@@ -1,0 +1,27 @@
+.reveal section img {
+  margin: 15px 0px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.reveal img{
+  max-width: 100% !important;
+}
+.welcome p{
+  text-transform: capitalize;
+}
+.welcome .handle{
+  text-transform: none;
+}
+.v8{
+  background-color: #1e88e5;
+}
+.v8-wrapper{
+  background: #ef5350; width: 43%; font-size: 4rem; text-align: left; padding: 15px; position: absolute; top: 0; left: 198px; z-index: -1; height: 180px;
+}
+.slide-background{
+  background-color: rgba(0,0,0,0.5) !important;
+}
+.slide-background .slide-background{
+  background-color: transparent !important;
+  }

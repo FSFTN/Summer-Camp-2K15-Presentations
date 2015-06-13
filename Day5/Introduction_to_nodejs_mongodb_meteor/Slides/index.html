@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Introduction to MongoDB, Node.js and Meteor</title>
+
+    <meta name="description" content="A brief introduction to Node.js, MongoDB and Meteor for participants attending FSFTN Summer Camp 2015">
+    <meta name="author" content="Raj Anand">
+    <meta name='keywords' content='Meteor, Mongdb, Node.js, chatapp, fsftn, summercamp,summer camp 2015, fsftnsummercamp, sc2k15,free software, chennai, workshop, free software workshop chennai'>
+    <meta name='url' content='http://rajanand02.github.io/introduction-to-nodejs-mongo-meteor'>
+    <meta name='subject' content='Node.js MongoDB'>
+    <meta name='coverage' content='Worldwide'>
+    <meta name='distribution' content='Global'>
+    <meta property="og:title" content="Introduction to MongoDB, Node.js and Meteor" />
+    <meta property="og:url" content="http://rajanand02.github.io/introduction-to-nodejs-mongo-meteor" />
+    <meta property="og:image" content="http://rajanand02.github.io/introduction-to-nodejs-mongo-meteor/img/home_page.png" />
+    <meta property="og:description" content="A brief introduction to Node.js, MongoDB and Meteor for participants attending FSFTN Summer Camp 2015" />
+    <meta property="og:site_name" content="Raj Anand introduction to Node.js MongoDB Meteor" />
+    <meta property="og:type" content="website" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/monokai_sublime.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section data-transition='concave' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+          <h3>Introduction to Node.js, MongoDB <br />&  Meteor</h3>
+          <!--<img src="img/home_page1.png" alt="" style="width: 100%;"/>-->
+          <div class="">
+          <img src="img/nodejs.png" alt="" style="width: 30%;" />
+          <img src="img/mongodb_leaf.png" alt="" style="width: 23%; margin-left: 10%; margin-right: 3%" />
+          <img src="img/meteor.png" alt="" style="width: 30%;" />
+          </div>
+          <br />
+          <p style="font-size: 3rem; ">
+                <small><a href="http://rajanand02.github.io/" target="_blank" style=""> Raj Anand</a> -&nbsp;  Activist / Web Developer</small>
+                </p>
+        </section>
+
+        <section data-transition='concave'  data-background='img/stars1.png' data-background-size="150px" data-background-repeat="repeat" data-background-transition="slide">
+          <img src="img/rule.jpg" alt="" />
+        </section>
+
+        <!-- Example of nested vertical slides -->
+        <section data-transition='concave' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px">
+            <img src="img/nodejs.png" alt="" style="width: 80%;" />
+        </section>
+
+        <section data-transition='concave'  data-background='img/stars1.png' data-background-size="150px" data-background-repeat="repeat" data-background-transition="slide">
+        <section>
+          <p class="" style="font-size: 4rem">Where does your JavaScript code runs?</p>
+          <p class="fragment" style="font-size: 3rem">Typically in a Browser
+            <br />
+            (client)
+          </p>
+          </section>
+          <section data-transition="convex">
+            <h2>Jsconf 2009</h2>
+            <div class="">
+              <img width="" height="" class="" style="width: 80%;" src="img/ryan.jpg" alt="Ryan Dahl" style="">
+              <p class="">   
+                - Ryan Dahl     
+              </p>
+            </div>
+          </section>
+          <section data-transition="convex">
+              <br />
+              <p class='v8' style="margin: auto; width: 38%; font-weight: bold; background-color: #1e88e5;  height: 60px;
+  line-height: 60px">
+                Chrome V8 Engine
+              </p>
+
+              <p class="fragment" style="background: #ef5350; width: 43%; font-size: 4rem; text-align: left; padding: 15px; position: absolute; top: -70px; left: 275px; z-index: -1; height: 180px;">
+                Node.js
+              </p>
+
+          </section>
+        </section>
+
+        <section  data-transition='concave' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px">
+          <h2>What is Node.js?</h2>  
+          <ol style="font-size: 2.6rem">
+            <li>
+              <p class="fragment">
+                It is a run time environment 
+              </p>
+            </li>
+            <li>
+              <p class="fragment">
+                Built on Chrome’s V8 engine 
+              </p>
+            </li>
+            <li>
+              <p class="fragment">
+                Building network applications on the server-side using JavaScript.
+              </p>
+            </li>
+            <li>
+              <p class="fragment">
+                It uses event-driven and non-blocking model.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section data-transition='concave' data-background='img/stars1.png' data-background-size="150px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px">
+          <h1>What it is not?</h1>  
+          <ol style="font-size: 3rem">
+            <li>
+              <p class="fragment">
+                A Web Framework
+              </p>
+            </li>
+            <li>
+              <p class="fragment">
+                Multi-threaded
+              </p>
+            </li>
+            <li>
+              <p class="fragment">
+                Beginners
+              </p>
+            </li>
+          </ol>
+
+        </section>
+
+        <section data-transition='concave' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px">
+          <h2>What you could build with Node.js?</h2>  
+          <div class="row">
+            <div class="">
+              <ol style="font-size: 3rem">
+                <li>
+                  <p class="fragment">
+                    Web socket Server
+                  </p>
+                </li>
+                <li>
+                  <p class="fragment">
+                    Streaming server
+                  </p>
+                </li>
+                <li>
+                  <p class="fragment">
+                    JSON APIs
+                  </p>
+                </li>
+              </ol>
+            </div>
+
+          </section>
+
+          <section  data-transition='concave' data-background='img/stars1.png' data-background-size="150px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px">
+            <h3>Blocking <a href="#">Vs</a> Non-Blocking</h3>
+             <small style="  color: #ff2c2d; position: absolute; left: 50px">file_read.rb</small>
+            <pre style="box-shadow: none; font-size: 1.3rem;">
+            <code data-trim contenteditable>
+file = File.open('introduction.txt', 'r')
+
+puts file.read
+
+puts "Welcome to Summer Camp 2015"
+            </code>
+            </pre>
+            <small style="  color: #ff2c2d; position: absolute; left: 50px">file_read.js</small>
+            <pre style="box-shadow: none; font-size: 1.3rem;">
+            <code data-trim contenteditable>
+var fs = require('fs');
+
+fs.readFile('introduction.txt' ,'utf8', function ( err, content ){
+  console.log(content);
+});
+
+console.log("Welcome to Summer Camp 2015");
+</code>
+</pre>
+          </section>
+
+          <section data-transition='concave' data-background='img/stars1.png' data-background-size="150px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px">
+            <h3>Hello world in Node.js</h3>
+              <pre style="font-size: 1.3rem">
+              <code data-trim contenteditable class="javascript">
+
+var http = require('http');
+
+var server = http.createServer(function (request, response) {
+
+  response.writeHead(200, {"Content-Type": "text/plain"});
+
+  response.end("Hello World\n");
+});
+
+server.listen(3000);
+
+console.log("Server running at http://127.0.0.1:3000/");
+              </code>
+              </pre>
+          </section>
+
+          <section  data-transition='concave' data-background='img/stars.png' data-background-size="200px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px">
+          <img src="img/mongodb.png" alt="mongodb" />
+          </section>
+
+
+          <section  data-transition='concave' data-background='img/stars1.png' data-background-size="150px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px">
+          <section>
+            <h2>History</h2>
+            <img src="img/timeline.png" alt="timeline" />
+            <img src="img/arrow.gif" alt="timeline"style="width: 12%; padding-bottom: 120px;" />
+            <p style="position: absolute;right: 0;bottom: 23%;">Relational Databases</p>
+          </section>
+
+            <section data-transition="convex">
+
+              <h3>Scaling</h3>
+              <img src="img/scale.png" alt="scale" />
+              <p>In 90's</p>
+            </section>
+
+            <section data-transition="convex">
+              <h3>Scaling Vertically</h3>
+              <img src="img/vertical_scaling.png" alt="scale" />
+            </section>
+            <section  data-transition="convex">
+              <h3>Scaling horizontally</h3>
+              <img src="img/horizontal_scaling.png" alt="scale" />
+            </section>
+            <section  data-transition="convex">
+              <h3>Scaling horizontally</h3>
+              <img src="img/horizontal_issue.png" alt="scale" />
+            </section>
+            <section data-transition="convex">
+              <img src="img/google_amazon.png" alt="scale" style="  width: 55%" />
+            </section>
+          </section>
+
+
+          <section  data-transition='concave' data-background='img/stars.png' data-background-size="80px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px" >
+            <h3>Common Characteristics of NoSQL </h3>
+            <ol style="font-size: 3rem">
+              <li>
+                <p class="fragment">
+                  Schema-less
+                </p>
+              </li>
+              <li>
+                <p class="fragment">
+                  Flexible
+                </p>
+              </li>
+              <li>
+                <p class="fragment">
+                  Very very fast
+                </p>
+              </li>
+              <li>
+                <p class="fragment">
+                  Highly Scalable
+                </p>
+              </li>
+              <li>
+                <p class="fragment">
+                  Open-source
+                </p>
+              </li>
+            </ol>
+          </section>
+          <section  data-transition='concave' data-background='img/stars1.png' data-background-size="80px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px" >
+            <h2>Types of NoSQL Databases</h2>
+            <ol style="font-size: 3rem">
+              <li>
+                <p class="fragment">
+                  Key-Value based (Redis, Riak)
+                </p>
+              </li>
+              <li>
+                <p class="fragment">
+                  Document based (MongoDB, CouchDB)
+                </p>
+              </li>
+              <li>
+                <p class="fragment">
+                  Column-based (Hbase, Cassandra)
+                </p>
+              </li>
+              <li>
+                <p class="fragment">
+                  Graph-based (Neo4J, OrientDB)
+                </p>
+              </li>
+            </ol>
+          </section>
+
+
+          <section data-transition='concave' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px" >
+            <h2>What is MongoDB?</h2>
+            <p class="fragment" style="font-size: 3rem">
+
+              Scalable, High performance, Open source, Document-oriented database.
+            </p>
+          </section>
+
+          <section data-transition='concave' data-background='img/stars1.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide" style="top: 10px" >
+            <h3>Post Document</h3>
+            <pre style="font-size: 1.3rem">
+              <code class="" data-trim contenteditable>
+   {
+       "_id": ObjectId("555cb7798440b2de2c4eef0e"),
+       "user": "xyz",
+       "content": "MongoDB is awesome",
+       "comments": [
+          {
+              "user": "abc",
+              "comment": "Yes, it is"
+          },
+         {
+              "user": "efg",
+              "comment": "True that."
+         },
+      ]
+   }
+              </code>
+            </pre>
+          </section>
+
+          <section data-transition='concave' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+            <h2>Concept Mapping</h2>
+            <img src="img/concept.png" alt="" />
+          </section>
+
+          <section data-transition='concave' data-background='img/stars1.png' data-background-size="200px" data-background-repeat="repeat" data-background-transition="slide">
+            <h3>Basic Commands</h3>
+            <img src="img/basic_commands.png" alt="" />
+          </section>
+
+          <section data-transition='concave' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+            <h2 style="color:#d32f2f;">Crud</h2>
+            <div class="fragment">
+            <pre style="height: 150px; margin: 0">
+              <code data-trim contenteditable>
+# Create
+> db.post.insert( { content: "MongoDB is awesome"} )
+> db.post.insert( { content: "Node.js is really cool"} )
+              </code>
+            </pre>
+          </div>
+          <div class="fragment">
+          <pre style="height: 150px;margin: 0">
+            <code data-trim contenteditable>
+# Read
+> db.post.find()
+> db.post.findOne( { content: "MongoDB is awesome"} )
+            </code>
+          </pre>
+        </div>
+        <div class="fragment">
+        <pre style="height: 160px; margin: 0">
+          <code data-trim contenteditable>
+# Update
+> db.post.update( { content: "MongoDB is awesome" }, { $set: { content: "MongoDB is great" } } )
+> db.post.update( { content: "MongoDB is great" }, { $set: { content: "MongoDB is awesome" }, { likes: 10 } } )
+          </code>
+        </pre>
+      </div>
+      <div class="fragment">
+      <pre style="height: 150px;margin: 0">
+        <code data-trim contenteditable>
+# Delete
+> db.post.remove( { likes: 10 })
+> db.post.remove({ })
+        </code data-trim contenteditable>
+      </pre>
+          </div>
+        </section>
+
+        <section  data-transition='concave' data-background='img/stars1.png' data-background-size="200px" data-background-repeat="repeat" data-background-transition="slide">
+          <section data-transition="convex">
+            <h1>What is Meteor?</h1>
+            <img src="img/meteor.png" alt="meteor" />
+          </section>
+          <section data-transition="convex">
+            <img src="img/nodejs_0.png" alt="" style="width: 20%;" />
+            <div class="">
+              <img src="img/mongodb.png" alt="" style="width: 20%;" />
+            </div>
+            <div class="">
+              <img src="img/handlebars_logo.png" alt="" style="width: 20%;" />
+            </div>
+            <div class="">
+              <h4>well-known & productivity-proven</h4>
+              <h4>Javascript Libraries</h4>  
+              <p>Packaged into one</p>
+              <p>powerful platform to build modern apps</p>
+            </div>
+          </section>
+          <section data-transition="convex">
+            <img src="img/mordernapp.png" alt="" />
+            <p>Focus on your app’s unique features instead
+              of wrangling network code</p>
+          </section>
+        </section>
+
+
+
+        <section data-transition='concave' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+          <section>
+          <h1>7<br>principles</h1>
+          </section>
+          <section  data-transition="convex">
+            <h2>1.<br><br>
+            </h2>
+            <h1>Data</h1>
+            <h2>on</h2>
+            <h1>wire</h1>
+          </section>
+          <section  data-transition="convex">
+            <h2>2.<br><br>
+            </h2>
+            <h1>One<br>
+            </h1>
+            <h2>language</h2>
+          </section>
+          <section  data-transition="convex">
+            <h2>3.<br><br>
+            </h2>
+            <h1>Database<br>
+            </h1>
+            <h2>everywhere</h2>
+          </section>
+          <section  data-transition="convex">
+            <h2>4.<br><br>Latency<br>
+            </h2>
+            <h1>compensation</h1>
+          </section>
+          <section  data-transition="convex">
+            <h2>5.<br><br>Full<br>stack<br>
+            </h2>
+            <h1>Reactivity</h1>
+          </section>
+          <section  data-transition="convex">
+            <h2>6.<br><br>Embrace<br>the<br>
+            </h2>
+            <h1>Ecosystem</h1>
+          </section>
+          <section  data-transition="convex">
+            <h2>7.<br><br>
+            </h2>
+            <h1>Simplicity</h1>
+            <h2>equals</h2>
+            <h1>Productivity</h1>
+          </section>
+
+        </section>
+
+        <section  data-transition='convex' data-background='img/stars1.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+          <h1>Quickstart</h1>
+          <div>
+            <br>
+          </div>
+          <div>Install Meteor:</div>
+          <pre><code data-trim contenteditable>$ curl https://install.meteor.com | /bin/sh</code></pre>
+          <div>Create a project:</div>
+          <pre><code data-trim contenteditable>$ meteor create myapp </code></pre>
+          <div>Run it locally:</div>
+          <div>
+            <pre><code data-trim contenteditable>
+$ cd myapp
+$ meteor
+=&gt; Meteor server running on: http://localhost:3000/</code></pre>
+        </div>
+      </section>
+
+
+        <section data-transition='convex' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+          <h2>Handlebars Template</h2>
+          <div>
+            <br>
+          </div>
+          <div>
+<pre><code data-trim contenteditable>&lt;head&gt;
+  &lt;title&gt;myapp&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;Welcome to Meteor!&lt;/h1&gt;
+
+  {{&gt; hello}}
+&lt;/body&gt;
+
+&lt;template name="hello"&gt;
+  &lt;button&gt;Click Me&lt;/button&gt;
+  &lt;p&gt;You've pressed the button {{counter}} times.&lt;/p&gt;
+&lt;/template&gt;</code></pre>
+        </section>
+
+        <section data-transition='convex' data-background='img/stars1.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+<h2>Template mangers</h2>
+<div>
+<br>
+</div>
+<div>
+<pre style="font-size: 1rem;"><code data-trim contenteditable>if (Meteor.isClient) {
+  // counter starts at 0
+  Session.setDefault("counter", 0);
+
+  Template.hello.helpers({
+    counter: function () {
+      return Session.get("counter");
+    }
+  });
+
+  Template.hello.events({
+    'click button': function () {
+      // increment the counter when button is clicked
+      Session.set("counter", Session.get("counter") + 1);
+    }
+  });
+}
+If (Meteor.isServer){
+// Server side code 
+}
+</code></pre>
+</div>
+        </section>
+        <section data-transition='convex' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+          <h2>Let's build something cool</h2>
+          </section>
+
+        <section  data-transition='convex' data-background='img/stars1.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+          <section>
+          <h1>Structure<br>&amp;<br>Architecture</h1>
+          </section>
+          <section data-transition="convex">
+            <h2>Folder Structure</h2>
+            <div>
+              <br>
+            </div>
+<pre><code data-trim contenteditable>/client/...
+
+</code><code data-trim contenteditable></code></pre>
+            <div>
+<pre><code data-trim contenteditable>/server/...
+
+</code><code data-trim contenteditable></code></pre>
+          </div>
+          <div>
+<pre><code data-trim contenteditable>/lib/...
+
+</code><code data-trim contenteditable></code></pre>
+        </div>
+        <div>
+<pre><code data-trim contenteditable>/public/...
+
+</code><code data-trim contenteditable></code></pre>
+      </div>
+<pre><code data-trim contenteditable> main.*
+
+</code></pre>
+      <br>
+    </section>
+  </section>
+  <section data-transition='convex' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+    <h1>LIVE HTML<br>&amp;<br>HOT CODE PUSH</h1>
+  </section>
+
+  <section data-transition='convex' data-background='img/stars1.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+    <section>
+      <h1>Mongo DB<br>&amp;<br>COLLECTIONS</h1> 
+    </section>
+    <section data-transition="convex">
+      <h2>Synchronized Collections</h2>
+      <div>
+        <br>
+      </div>
+      <div>
+<pre><code data-trim contenteditable style="text-align: center;">Posts = new Meteor.Collection("posts");</code></pre>
+    </div>
+    <div>
+      <br>
+    </div>
+    <div>
+<pre><code  data-trim contenteditable style="text-align: center;">Posts.find();
+Posts.findOne();
+Posts.insert();
+Posts.update();
+Posts.remove();
+...</code></pre>
+  </div>
+  </section>
+  </section>
+  <section data-transition='convex' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+    <h2>Publish/<g class="" id="" data-gr-id="3">Subsribe</g></h2>
+    <div>
+      <br>
+    </div>
+    <div>
+<pre><code data-trim contenteditable>// server: publish the messages collection
+Meteor.publish("messages", function () {
+&nbsp; return Messages.find();
+}); </code></pre>
+  </div>
+  <div>
+    <br>
+  </div>
+  <div>
+<pre><code data-trim contenteditable>// client: subscribe to the published messages
+Meteor.subscribe("messages"); </code></pre>
+</div>
+  </section>
+  <section data-transition='convex' data-background='img/stars1.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+    <h2>Method Calls</h2>
+    <div>
+    </div>
+    <div>
+<pre><code data-trim contenteditable>Meteor.methods({
+&nbsp; addMessage: function (message, room, username) {
+    Messages.insert( {
+      room: room,
+      message: message,
+      username: username
+    } );
+&nbsp; }
+}); </code></pre>
+  </div>
+  <div>
+  </div>
+  <div>
+<pre><code data-trim contenteditable>// async call
+Meteor.call('addMessage', message, room, username, function (err, res) { 
+  ... 
+} );
+
+// sync call
+var result = Meteor.call('addMessage', message, room, username); </code></pre>
+</div>
+<br>
+  </section>
+  <section data-transition='convex' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+
+    <h2>Accounts</h2>
+    <div>
+        <br>
+    </div>
+    <div>
+    <pre style="font-size: 1.5rem;"><code data-trim contenteditable style="text-align: center;">$ meteor add accounts-ui
+
+$ meteor add accounts-*</code></pre>
+    </div>
+    <div>
+    <pre style="font-size: 1.5rem;"><code  data-trim contenteditable style="text-align: center;">* = password, facebook, twitter, google, github, ...
+    OAuth2</code></pre>
+    </div>
+    <div>
+    <br>
+    </div>
+    <div>
+    <pre style="font-size: 1.5rem;"><code  data-trim contenteditable style="text-align: center;">{{&gt; loginButtons}}</code></pre>
+    </div>
+  </section>
+  <section data-transition='convex' data-background='img/stars1.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+
+    <h2>Mobile Support</h2>
+    <div>
+        <br>
+    </div>
+    <div>
+    <pre style="font-size: 1.5rem;"><code data-trim contenteditable style="text-align: center;">$ meteor add-platform * 
+    </code></pre>
+    </div>
+    <div>
+      <pre style="font-size: 1.5rem;"><code data-trim contenteditable style="text-align: center;">$ meteor run * 
+      </code></pre>
+    <pre style="font-size: 1.5rem;"><code  data-trim contenteditable style="text-align: center;">* = android, ios ...
+    </code></pre>
+  </section>
+  <section data-transition='convex' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+    <h2>Deployment</h2>
+    <div>
+      <br>
+    </div>
+    <div>
+      <br>
+    </div>
+    <h3>on Meteor infrastructure</h3>
+    <div>
+<pre style="font-size: 1.5rem;"><code style="text-align: center;">$ meteor deploy myapp.meteor.com</code></pre>
+  </div>
+  <div>
+</div>
+<div>
+  <br>
+</div>
+<div>
+  <br>
+</div>
+<h3>on own infrastructure</h3>
+<div>
+<pre style="font-size: 1.5rem;"><code style="text-align: center;">$ meteor bundle myapp.tgz</code></pre>
+</div>
+  </section>
+  <section data-transition='convex' data-background='img/stars1.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+    <section data-transition="convex">
+      <h1>Ecosystem</h1>
+    </section>
+    <section data-transition="convex">
+      <h2 class=''>ATMOSPHERE</h2>
+      <div><br></div>
+      <h2 class=" fragment" style="">NPM Packages</h2>
+    </section>
+  </section>
+  <section data-transition='convex' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+    <img src="img/meteor_community.png" alt="" style="width: 851.008715973745px; height: 450.281942339676px; max-height: none; max-width: none;"/> 
+    <div style=""><ul>
+        <li style="text-align: left;">Over 201 groups around the world</li>
+        <li style="text-align: left;">More than 25k active members</li>
+        <li style="text-align: left;">More than 4k community packages</li>
+        <li style="text-align: left;">One of the most starred GitHub repo(&gt;23k)</li>
+    </ul></div>
+  </section>
+  <section data-transition='convex' data-background='img/stars1.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+    <h2>Learning resources<br>
+    </h2>
+    <div>meteor.com/learn</div>
+    <div><br></div>
+    <div><br></div>
+    <p></p>
+    <ul>
+      <li>Official Meteor tutorial at meteor.com/install<br>
+      </li>
+      <li>Discover Meteor<br>
+      </li>
+      <li>Documentation at docs.meteor.com<br>
+      </li>
+      <li>http://meteortips.com/book/<br>
+      </li>
+      <li>https://meteorhacks.com/<br>
+      </li>
+    </ul>
+  </section>
+  <section data-transition='convex' data-background='img/stars.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+    <h2>Questions?</h2>
+  </section>
+  <section data-transition='convex' data-background='img/stars1.png' data-background-size="100px" data-background-repeat="repeat" data-background-transition="slide">
+    <h2>Thank you</h2>
+    <div>GitHub, Twitter - rajanand02</div>
+    <div><br></div>
+    <div>
+      <span style="color:#d32f2f">rajanand@fsftn.org</span><br>
+      <br />
+      <a href="http://github.com/rajanand02/introduction-to-nodejs-mongo-meteor" target="_blank" style="font-size:1.4rem;">Get the code.</a>
+    </section>
+  </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+
+  // Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+  parallaxBackgroundImage: 'img/parallax-background.jpg', 
+  parallaxBackgroundSize: '3800px 200px',
+  backgroundTransition: 'slide', 
+  parallaxBackgroundHorizontal: 200,
+  parallaxBackgroundVertical: 50,
+  transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+  // Optional reveal.js plugins
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true },
+    { src: 'plugin/notes/notes.js', async: true }
+  ]
+});
+
+</script>
+
+  </body>
+</html>
