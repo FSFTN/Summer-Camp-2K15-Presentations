@@ -1,9 +1,25 @@
 # Summercamp2k15_presentations
 Presentations and resource material used in SummerCamp 2k15
 
+### [Day 1](Day1/README.md)
+
+----
+
+### [Day 2](Day2/README.md)
+
+----
+
+### [Day 3](Day3/README.md)
+
+----
+
+### [Day 4](Day4/README.md)
+
+----
+
 ### Day 5
 
-#### Introduction to Node.js, MongoDB and Meteor
+#### Talk 1: Introduction to Node.js, MongoDB and Meteor
 
 ##### Presentation
 
@@ -16,3 +32,7 @@ Presentations and resource material used in SummerCamp 2k15
 ##### Live app
 
 [http://sc2k15chat.meteor.com/](http://sc2k15chat.meteor.com/)
+
+----
+
+### [Day 6](Day6/README.md)
