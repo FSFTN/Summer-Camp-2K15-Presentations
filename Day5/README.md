@@ -20,7 +20,8 @@
 
 **Speaker**: Anand Moorthy
 
- - Presentation
+ - Navigate to `FirefoxOs` Directory
+ - Open 'firefoxos.html' in Firefox / Chromium
 
 ----
 
