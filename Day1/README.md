@@ -3,7 +3,9 @@
 
 ### Accessing Presentation
 
- - Open fsfs.html file in Firefox / Chromium
+ - Navigate to `Philosophy` Directory
+
+ - Open `fsfs.html` file in Firefox / Chromium
 
 ----
 

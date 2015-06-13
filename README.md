@@ -1,7 +1,7 @@
 # Summercamp2k15_presentations
 Presentations and resource material used in SummerCamp 2k15
 
-### [Day 1](Day1/README.md)
+### [Day 1](Day1/)
 
 ----
 
