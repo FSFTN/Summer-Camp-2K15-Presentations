@@ -13,6 +13,7 @@
 #### Talk 3: Contributing to Free Software
 
 **Speaker**: Arun Prakash
+
 ----
 
 #### Talk 4: S.W.I.F.T
