@@ -2,7 +2,7 @@
 
 **Speaker**: Aravind Gopalakrishnan
 
- - Presentation will be updated soon.
+ -[Presentation](https://github.com/aravindgd/ruby_introduction)
 
 ----
 ### Talk 2: Web Design Basics (HTML, CSS, JS)
