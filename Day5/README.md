@@ -4,7 +4,7 @@
 
  - Presentation
 
-[rajanand02.github.io/introduction-to-nodejs-mongo-meteor/](rajanand02.github.io/introduction-to-nodejs-mongo-meteor/)
+[http://hacktivist.in/introduction-to-nodejs-mongodb-meteor/](http://hacktivist.in/introduction-to-nodejs-mongodb-meteor/)
 
  - Meteor Code
 
